@@ -36,9 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\showControllers.cs" />
      <Compile Include="Assets\playerController.cs" />
+     <Compile Include="Assets\showControllers.cs" />
      <Compile Include="Assets\simpleAttatch.cs" />
+     <Compile Include="Assets\Gun.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -261,11 +262,11 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.16f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -621,20 +622,26 @@
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.OpenVR">
+        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="Unity.XR.Management.Editor">
+        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Subsystem.Registration">
+        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -648,20 +655,8 @@
     <Reference Include="UnityEngine.UI">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.OpenVR">
-        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Management">
-        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Management.Editor">
-        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR.Editor">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
@@ -669,8 +664,14 @@
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management">
+        <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
         <HintPath>/Users/ren/Desktop/Programming/CreateWithCode/SteamVR-Tutorial/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
@@ -680,10 +681,6 @@
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
       <Project>{4f82759a-3f7b-52c6-a1b4-fbb66ed070f1}</Project>
       <Name>SteamVR_Input_Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{f7244f6d-cc6a-a1f8-fe25-1d18bcf2120f}</Project>
-      <Name>SteamVR_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR.csproj">
       <Project>{c29f37f6-86a5-d061-8d39-29e6bf883fa8}</Project>
@@ -696,6 +693,10 @@
     <ProjectReference Include="SteamVR_Actions.csproj">
       <Project>{19542cb2-9df1-de07-1e5c-78a5029fb240}</Project>
       <Name>SteamVR_Actions</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Editor.csproj">
+      <Project>{f7244f6d-cc6a-a1f8-fe25-1d18bcf2120f}</Project>
+      <Name>SteamVR_Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
